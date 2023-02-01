@@ -13,6 +13,7 @@
 }
 
 .header__navbar {
+    z-index: 9999;
     visibility: visible;
     display: flex;
     gap: 30px;
@@ -115,6 +116,7 @@
         padding-right: 40px;
         padding-top: 40px;
         margin: 0;
+        height: 100vh;
         display: flex;
         align-items: flex-end;
         flex-direction: column;
@@ -131,5 +133,9 @@
     
     .header__logo {
         width: 140px;
+    }
+
+    #header-wrapper {
+        margin: 0 10px;
     }
 }
