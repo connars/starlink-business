@@ -1,10 +1,13 @@
 body {
   margin: 0;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
   height: 100vh;
 }
+
+
 
 .card {
   background: #2f2f2f !important;
@@ -24,6 +27,7 @@ body {
   z-index: -1;
   border-radius: 2px;
   opacity: 0;
+
   transition: opacity 300ms;
 }
 
@@ -32,13 +36,22 @@ body {
   inherits: false;
   initial-value: 50%;
 }
+
 @property --gradient-stop-two {
   syntax: "<percentage>";
   inherits: false;
   initial-value: 50%;
 }
+
 .card:nth-child(2)::before {
-  background: linear-gradient(45deg, transparent var(--gradient-stop), purple var(--gradient-stop), rebeccapurple var(--gradient-stop-two), transparent var(--gradient-stop-two));
+  background: linear-gradient(
+    45deg,
+    transparent var(--gradient-stop),
+    purple var(--gradient-stop),
+    rebeccapurple var(--gradient-stop-two),
+    transparent var(--gradient-stop-two)
+  );
+
   transition-property: --gradient-stop, --gradient-stop-two;
   transition-duration: 400ms;
   transition-timing-function: ease-out;
@@ -47,4 +60,4 @@ body {
 .card:nth-child(2):hover::before {
   --gradient-stop: 0%;
   --gradient-stop-two: 100%;
-}/*# sourceMappingURL=index.css.map */
+}
