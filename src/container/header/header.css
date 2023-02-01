@@ -18,13 +18,31 @@
     gap: 30px;
 }
 
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__left span svg {
+    margin-left: 7px;
+    transition: 0.3s ease-in-out;
+}
+
+.sign-out-text {
+    cursor: pointer;
+}
+
+.sign-out-text:hover svg {
+    transform: translateX(5px);
+}
+
 .header__menu-btn {
     visibility: hidden;
-    margin-left: 100px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,6 +119,7 @@
         align-items: flex-end;
         flex-direction: column;
         position: fixed;
+        z-index: 9999;
         width: 100%;
     }
 
@@ -110,4 +129,7 @@
         transform: translateX(0);
     }
     
+    .header__logo {
+        width: 140px;
+    }
 }

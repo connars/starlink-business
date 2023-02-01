@@ -2,6 +2,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .homepage__right {
@@ -73,6 +74,10 @@
     .homepage__inner {
         display: flex;
         flex-direction: column;
+    }
+
+    .homepage__left {
+        width: 100%;
     }
 
     .homepage__right {

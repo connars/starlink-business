@@ -15,11 +15,11 @@ function AccountCard() {
                     <div className='acc__card-balance-value'>
                         <span> $1.10</span>
                     </div>
-                    <div className='acc__card-balance-pay'>
+                    <div className='acc__card-balance-pay card'>
                         <button disabled>MAKE A PAYMENT</button>
                     </div>
                     <div className='acc__card-balance-update'>
-                        <div>UPDATE PAYMENT METHOD</div>
+                        <div className=''>UPDATE PAYMENT METHOD</div>
                     </div>
                 </div>
               
@@ -36,7 +36,7 @@ function AccountCard() {
                 </div>
             </div>
             <div className='acc__buttons'>
-                 <button>Sign Out</button>   
+                 <button className=''>Terms of service</button>   
             </div>
         </div>
     )

@@ -1,22 +1,23 @@
 import { Link, NavLink } from 'react-router-dom';
 import './header.css';
 import { useState, useEffect, useRef } from "react";
-import logo from '../../assets/images/logo-white.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignOut } from '@fortawesome/free-solid-svg-icons'
+
 
 function Header() {
-
-
-    
+       
     let menu = useRef('');
 
     const showMenu = () => {
       if(menu.current.classList.contains('active')) {
         menu.current.classList.remove('active');
+        document.body.style.overflowY = "visible";
       }else {
         menu.current.classList.add('active');
+        document.body.style.overflowY = "hidden";
       }
     }
-
 
     useEffect(() => {
         let links = document.querySelectorAll('.header__navbar-link');
@@ -26,18 +27,12 @@ function Header() {
             console.log(link)
         });
     });
-
- 
-
-   
- 
-    
    
     return (
         <div id='header' className='header'>
             <header className="header__wrapper">
                 <div id="header-wrapper" className="header__container container">
-                    <Link to="/" className="header__logo" href="">
+                    <Link to="/" className="header__logo">
                         <span className='logo__one'>STARLINK</span> BUSINESS
                     </Link>
                     <ul ref={menu} className="header__navbar" >
@@ -57,10 +52,19 @@ function Header() {
                             </Link>
                         </li>
                     </ul>
-                    <button onClick={showMenu} className="header__menu-btn">
-                        <span className="header__menu-line1 header__menu-line"></span>
-                        <span className="header__menu-line2 header__menu-line"></span>
-                    </button>
+                    
+                    <div className='header__left'>
+                        <span className='sign-out-text'>
+                            LOGOUT  
+                            <FontAwesomeIcon className='sign-out' icon={faSignOut} />  
+                        </span>
+                        
+                        <button onClick={showMenu} className="header__menu-btn">
+                            <span className="header__menu-line1 header__menu-line"></span>
+                            <span className="header__menu-line2 header__menu-line"></span>
+                        </button>
+                    </div>
+                     
                 </div>
             </header>
             </div>

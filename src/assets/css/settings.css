@@ -5,6 +5,12 @@
     --white: #F5F5F5;
 }
 
+button {
+    border: none !important;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
 
 body {
     margin: 0;
