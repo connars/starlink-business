@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 
-function HomePage() {
+function Billing() {
 
 
   return(
     <div className="homepage__container container">
-        <h1>HOME</h1>
+        <h1>Billing</h1>
     </div>
   )
 }
 
-export default HomePage;
+export default Billing;
